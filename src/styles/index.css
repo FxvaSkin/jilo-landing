@@ -12,11 +12,6 @@
   /* box-shadow: 0 0 1px 4px yellow; */
 }
 
-html,
 body {
   overflow-x: hidden;
-}
-
-body {
-  /* position: relative; */
 }
