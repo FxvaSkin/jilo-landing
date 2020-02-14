@@ -1,0 +1,11 @@
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  gap: 1em;
+}
+
+.card {
+  padding: 1em 2em;
+  border: 1px solid #ececec;
+  border-radius: 7px;
+}

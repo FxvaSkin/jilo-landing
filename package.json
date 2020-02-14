@@ -1,22 +1,33 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "jilo-landing",
+  "private": false,
+  "description": "Landing website for Jilo",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "@fxvaskin <fxva@outlook.com>",
   "dependencies": {
+    "classnames": "^2.2.6",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
+    "gatsby-plugin-netlify": "^2.1.32",
     "gatsby-plugin-offline": "^3.0.32",
+    "gatsby-plugin-postcss": "^2.1.20",
     "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-resolve-src": "^2.0.0",
     "gatsby-plugin-sharp": "^2.4.3",
+    "gatsby-plugin-sitemap": "^2.2.27",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
+    "mapbox-gl": "^1.7.0",
+    "postcss-preset-env": "^6.7.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-imask": "^6.0.1",
+    "react-mapbox-gl": "^4.8.2",
+    "react-transition-group": "^4.3.0",
+    "smooth-scroll": "^16.1.2"
   },
   "devDependencies": {
     "prettier": "^1.19.1"
@@ -29,7 +40,7 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
+    "start": "gatsby develop -H 0.0.0.0",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"

@@ -1,0 +1,22 @@
+.footer {
+  display: grid;
+  height: 12rem;
+
+  background-color: #000000;
+  color: #ffffff;
+
+  align-content: space-around;
+  justify-items: end;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 4em;
+  align-items: flex-end;
+}
+
+.social > * + * {
+  margin-left: 1em;
+}

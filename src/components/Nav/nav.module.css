@@ -1,0 +1,26 @@
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+}
+
+.item {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.item > * {
+  text-decoration: none;
+  color: #000000;
+}
+
+.item > *:hover {
+  text-decoration: underline;
+}
+
+.list > .item + .item {
+  margin-left: 2em;
+}

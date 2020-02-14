@@ -1,0 +1,56 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.input {
+  width: 100%;
+  font-size: 0.95rem;
+  height: 4.2rem;
+  border: none;
+  border-radius: 7px;
+  background: #f2f2f2;
+  padding: 0 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.label {
+  cursor: text;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1.5rem;
+  color: #969ca7;
+  transition: 120ms;
+}
+
+.input:focus.input:not(:read-only) + .label,
+.input:not(:placeholder-shown) + .label {
+  transform: translateY(-110%);
+}
+
+.input:required + .label::after {
+  content: '*';
+  margin-left: 1px;
+  color: #ff0000;
+}
+
+.rightDock {
+  position: absolute;
+  color: #969ca7;
+  display: flex;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  height: 24px;
+  height: fit-content;
+
+  padding-right: 1em;
+}
+
+.rightDock > * + * {
+  margin-left: 0.5em;
+}

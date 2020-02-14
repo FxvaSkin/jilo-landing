@@ -1,0 +1,9 @@
+.wrapper {
+  position: relative;
+}
+
+.container {
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 2000;
+}

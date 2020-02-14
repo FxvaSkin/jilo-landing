@@ -1,0 +1,56 @@
+/* box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default padding */
+ul,
+ol {
+  padding: 0;
+}
+
+/* remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  line-height: 1.5;
+}
+
+/* remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* a elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}

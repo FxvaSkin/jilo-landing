@@ -1,0 +1,9 @@
+.section {
+  width: 100%;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: var(--max-width);
+  padding: 6em 1em;
+}

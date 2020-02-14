@@ -1,0 +1,16 @@
+.dropdown {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  display: none;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.content.open {
+  display: block;
+}
