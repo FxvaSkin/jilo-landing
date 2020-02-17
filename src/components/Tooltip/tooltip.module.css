@@ -10,7 +10,7 @@
 }
 
 .tooltip {
-  position: relative;
+  position: absolute;
   cursor: default;
   background-color: #ffffff;
   color: rgba(0, 0, 0, 0.84);
@@ -60,4 +60,24 @@
   width: var(--arrow-width);
   height: var(--arrow-width);
   background-color: #ffffff;
+}
+
+/* Bottom-end */
+@media only screen and (max-width: 768px) {
+  .bone.right {
+    right: 50%;
+    top: initial;
+    bottom: 0;
+  }
+  .tooltip.right {
+    margin: 0;
+    margin-top: 0.5em;
+    transform: translateX(calc(-100% + 2em));
+  }
+  .tooltip.right::after {
+    left: initial;
+    right: 2em;
+    top: -0.4em;
+    transform: translateX(50%) rotate(45deg);
+  }
 }

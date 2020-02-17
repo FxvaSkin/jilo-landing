@@ -4,7 +4,6 @@ import styles from './tooltip.module.css'
 import { TooltipContext } from './TooltipContext'
 import { useTooltip } from './useTooltip'
 import { Portal } from '../Portal'
-import { CSSTransition } from 'react-transition-group'
 
 const TooltipGroup = ({ children }) => {
   const { target, onHover, onUnhover } = useTooltip()
