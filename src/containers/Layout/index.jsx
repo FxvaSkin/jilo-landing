@@ -35,11 +35,9 @@ const Layout = ({ children }) => {
 
   return (
     <StrictMode>
-      <div className={cx(styles.wrapper)}>
-        <Header siteTitle={title} items={items} />
-        <main className={cx(styles.main)}>{children}</main>
-        <Footer />
-      </div>
+      <Header siteTitle={title} items={items} />
+      <main className={cx(styles.main)}>{children}</main>
+      <Footer />
     </StrictMode>
   )
 }

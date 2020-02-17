@@ -1,4 +1,5 @@
 .section {
+  position: relative;
   padding-bottom: 1em;
 }
 .header {
@@ -8,7 +9,9 @@
 .description {
   display: flex;
   align-items: center;
+
   color: #747474;
+  background-color: #ffffff;
 }
 
 .icon {
