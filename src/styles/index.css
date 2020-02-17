@@ -4,14 +4,18 @@
 }
 
 *::selection {
-  background-color: yellowgreen;
+  background-color: slategrey;
 }
 
 *:focus {
   outline: none;
-  /* box-shadow: 0 0 1px 4px yellow; */
 }
 
+a:focus {
+  box-shadow: 0 0 1px 4px yellow;
+}
+
+html,
 body {
   overflow-x: hidden;
 }
