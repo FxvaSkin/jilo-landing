@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+}
+
+.badge {
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  font-size: 1.125rem;
+  font-weight: 500;
+}
