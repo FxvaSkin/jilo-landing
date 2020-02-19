@@ -1,0 +1,9 @@
+.mapboxgl-popup-content {
+  border-radius: 7px;
+}
+
+.mapboxgl-map {
+  width: 100%;
+  min-height: 20em;
+  height: 60vh;
+}

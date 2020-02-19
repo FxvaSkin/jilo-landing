@@ -1,92 +1,35 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
 import styles from './map.module.css'
-import './popupStyles.css'
-
-import ReactMapboxGl, {
-  Layer,
-  ZoomControl,
-  RotationControl,
-  Popup,
-} from 'react-mapbox-gl'
-
-import { Marker, Cluster } from 'react-mapbox-gl'
+import './map.css'
 
 import { Badge } from 'components/Badge'
 
+import { ContainerIcon } from './ContainerIcon'
+
 import accessToken from 'token'
+import { branches } from './branches'
+import { MarkerIcon } from './MarkerIcon'
 
-const branches = [
-  {
-    key: 'anus',
-    lat: 38.524316,
-    lng: 68.76278,
-    tel: 'Тел: 93-999-00-61/90-999-00-61',
-    hours: `Режим работы:
-Пн-Сб: 8-17
-Вс: 9-14`,
-    address: 'г.Душанбе, ул. Н.Карабаева 92/2',
-  },
-  {
-    key: 'anus2',
-    lat: 38.554818,
-    lng: 68.762541,
-    tel: 'Тел: 93-300-09-99/90-993-09-99',
-    hours: `Режим работы:
-Пн-Сб: 8-17
-Вс: 9-14`,
-    address: 'г.Душанбе, ул. Н.Карабаева 6',
-  },
-]
+let ReactMapboxGl = {}
+let Layer, ZoomControl, RotationControl, Popup, Marker, Cluster
 
-const Mapbox = ReactMapboxGl({ accessToken, scrollZoom: false })
+if (typeof window !== `undefined`) {
+  ReactMapboxGl = require('react-mapbox-gl')
+  Layer = ReactMapboxGl.Layer
+  ZoomControl = ReactMapboxGl.ZoomControl
+  RotationControl = ReactMapboxGl.RotationControl
+  Popup = ReactMapboxGl.Popup
+  Marker = ReactMapboxGl.Marker
+  Cluster = ReactMapboxGl.Cluster
+}
 
-const ContainerIcon = () => (
-  <svg
-    style={{
-      stroke: '#000000',
-      fill: '#ffdd2c',
-      strokeWidth: '1px',
-      width: '3em',
-      height: '3em',
-    }}
-    viewBox="0 0 24 24"
-    width="24"
-    height="24"
-    stroke="currentColor"
-    stroke-width="1.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    fill="none"
-    shape-rendering="geometricPrecision"
-  >
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-  </svg>
-)
-
-const MarkerIcon = () => (
-  <svg
-    style={{
-      stroke: '#000000',
-      fill: '#ffdd2c',
-      strokeWidth: '1px',
-      width: '3em',
-      height: '3em',
-    }}
-    viewBox="0 0 24 24"
-    width="24"
-    height="24"
-    stroke="currentColor"
-    stroke-width="1.5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    fill="none"
-    shape-rendering="geometricPrecision"
-  >
-    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
-    <circle cx="12" cy="10" r="3" />
-  </svg>
-)
+const Mapbox =
+  ReactMapboxGl.Map &&
+  ReactMapboxGl.Map({
+    accessToken,
+    scrollZoom: false,
+  })
 
 const ClusterMarker = (coordinates, pointCount) => (
   <Marker coordinates={coordinates}>
@@ -99,6 +42,8 @@ const ClusterMarker = (coordinates, pointCount) => (
 const Map = () => {
   const [selected, setSelected] = useState()
 
+  if (!Mapbox) return <div />
+
   const handleClick = selected => {
     setSelected(selected)
   }
@@ -109,11 +54,10 @@ const Map = () => {
 
   return (
     <Mapbox
-      zoom={[13]}
+      zoom={[12]}
       // eslint-disable-next-line
       style="mapbox://styles/mapbox/outdoors-v10?optimize=true"
-      className={styles.container}
-      center={[68.79770771265291, 38.570597362250226]}
+      center={[68.762, 38.535]}
       flyToOptions={{ speed: 0 }}
       onClick={handleClose}
     >
