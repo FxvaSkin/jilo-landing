@@ -95,21 +95,35 @@ const Calculator = () => {
   const [type, setType] = useState(types.defaultValue)
   const [mortgagedDays, setMortgagedDays] = useState(defaultMortgagedDays)
 
-  const debt = weight ? weight * amount[type][hallmark] : 0
+  const handlePickup = () => {
+    if (typeof window !== 'undefined') {
+      const id = 'branches'
+      const element = document.getElementById(id)
 
+      if (element) {
+        if (window.history.pushState) {
+          window.history.pushState(null, null, `/#${id}`)
+        } else {
+          window.location.hash = id
+        }
+        element.scrollIntoView({
+          behavior: 'smooth',
+        })
+        // window.scrollBy(0, -3.5 * 16)
+      }
+    }
+  }
+
+  const debt = weight ? weight * amount[type][hallmark] : 0
   const percent = rate && rates.options.find(r => r.value === rate).percent
   const received =
     mortgagedDays && debt && percent
       ? mortgagedDays * ((debt * percent) / 100) + debt
       : 0
 
-  console.log(mortgagedDays)
-
   return (
-    <Section>
-      <Header as="h2" id="calculator">
-        Калькулятор.
-      </Header>
+    <Section id="calculator">
+      <Header as="h2">Калькулятор.</Header>
 
       <div className={cx(styles.container)}>
         <div className={styles.grid}>
@@ -184,7 +198,7 @@ const Calculator = () => {
               </span>
               <span>{received.toFixed(0)} TJS</span>
             </div>
-            <Button disabled={!debt}>
+            <Button disabled={!debt} onClick={handlePickup}>
               Забрать{debt ? ` ${debt.toFixed(0)} TJS` : ''}
             </Button>
           </article>

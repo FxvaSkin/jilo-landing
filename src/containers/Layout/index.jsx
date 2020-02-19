@@ -12,7 +12,7 @@ import { Footer } from 'containers/Footer'
 
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
-  require('smooth-scroll')('a[href*="#"]', { offset: () => 16 * 3.5 })
+  require('smooth-scroll')('a[href*="#"]')
 }
 
 const Layout = ({ children }) => {

@@ -9,7 +9,6 @@ const useMatchPosition = () => {
         element.scrollIntoView({
           behavior: 'auto',
         })
-      window.scrollBy(0, -3.5 * 16)
     }
   }, [])
 }

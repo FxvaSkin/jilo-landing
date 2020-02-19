@@ -10,7 +10,7 @@ const Header = ({ items }) => (
   <header className={cx(styles.header)}>
     <div className={cx(styles.headerContent)}>
       <h1 className={cx(styles.logo)}>
-        <Link to="/#home" className={styles.logoLink}>
+        <Link to="/#top" className={styles.logoLink}>
           <span role="img" aria-label="gem stone" className={styles.logoIcon}>
             💎
           </span>

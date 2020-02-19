@@ -1,13 +1,9 @@
 import React from 'react'
+import styles from './map.module.css'
+
 export const MarkerIcon = () => (
   <svg
-    style={{
-      stroke: '#000000',
-      fill: '#ffdd2c',
-      strokeWidth: '1px',
-      width: '3em',
-      height: '3em',
-    }}
+    className={styles.marker}
     viewBox="0 0 24 24"
     width="24"
     height="24"

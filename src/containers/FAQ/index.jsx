@@ -27,10 +27,8 @@ const cards = [
 ]
 
 const FAQ = () => (
-  <Section>
-    <Header as="h2" id="faq">
-      Популярные вопросы
-    </Header>
+  <Section id="faq">
+    <Header as="h2">Популярные вопросы</Header>
     <div className={styles.cardsContainer}>
       {cards.map(card => (
         <div className={styles.card}>

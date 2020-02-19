@@ -8,8 +8,8 @@ import { Header } from 'components/Header'
 
 const Branches = () => {
   return (
-    <Section contentClassName={cx(styles.section)}>
-      <Header as="h2" id="branches" className={styles.header}>
+    <Section id="branches" contentClassName={cx(styles.section)}>
+      <Header as="h2" className={styles.header}>
         Филиалы
       </Header>
       <p className={styles.description}>

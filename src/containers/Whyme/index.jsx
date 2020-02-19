@@ -54,8 +54,8 @@ const Card = ({ className, children, ...props }) => (
 
 const Whyme = () => {
   return (
-    <Section>
-      <Header id="why" as="h2" className={styles.header}>
+    <Section id="why">
+      <Header as="h2" className={styles.header}>
         Почему мы?
       </Header>
       <Header as="h2">Удобно. Быстро. Выгодно.</Header>
