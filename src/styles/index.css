@@ -19,3 +19,12 @@ html,
 body {
   overflow-x: hidden;
 }
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  select,
+  select:focus,
+  input,
+  input:focus {
+    font-size: 16px !important;
+  }
+}
