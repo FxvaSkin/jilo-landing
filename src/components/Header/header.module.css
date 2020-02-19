@@ -1,7 +1,8 @@
 .header {
   margin-bottom: 1em;
   line-height: 1.1;
-  /* color: rgba(0, 0, 0, 0.84); */
+
+  margin-bottom: 0.5em;
 }
 
 h1.header {
@@ -9,21 +10,10 @@ h1.header {
 }
 
 h2.header {
-  font-size: 4rem;
-}
-
-h3.header {
-  /* font-size: 3rem; */
-  margin-bottom: 0.5em;
+  font-size: 3rem;
 }
 
 @media only screen and (max-width: 520px) {
-  h2.header {
-    font-size: 3rem;
-  }
-}
-
-@media only screen and (max-width: 320px) {
   h2.header {
     font-size: 2rem;
   }
