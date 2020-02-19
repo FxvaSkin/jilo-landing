@@ -1,10 +1,19 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import cx from 'classnames'
 import styles from './footer.module.css'
+import { Item } from 'components/Nav'
 
-const Footer = () => (
-  <footer className={cx(styles.footer)}>
-    <span className={styles.content}>
+const Footer = ({ items }) => {
+  return (
+    <footer className={cx(styles.footer)}>
+      <nav className={styles.links}>
+        {items?.map(item => (
+          <li key={item.key} className={styles.link}>
+            <Link to={item.to}>{item.title}</Link>
+          </li>
+        ))}
+      </nav>
       <span className={styles.social}>
         <svg
           className={styles.icon}
@@ -36,10 +45,10 @@ const Footer = () => (
           <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
           <path d="M17.5 6.5h.01" />
         </svg>
+        <p className={styles.copyright}>Jilo © 2020</p>
       </span>
-      <p>Jilo © 2020</p>
-    </span>
-  </footer>
-)
+    </footer>
+  )
+}
 
 export { Footer }

@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
     <StrictMode>
       <Header siteTitle={title} items={items} />
       <main className={cx(styles.main)}>{children}</main>
-      <Footer />
+      <Footer items={items} />
     </StrictMode>
   )
 }

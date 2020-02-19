@@ -10,6 +10,8 @@
   border-bottom: solid 1px #ececec;
 
   z-index: 1000;
+
+  white-space: nowrap;
 }
 
 @supports (backdrop-filter: blur()) {
@@ -28,6 +30,8 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 1em;
+
+  overflow: auto hidden;
 }
 
 .logoLink {
@@ -38,10 +42,9 @@
   font-weight: 500;
   text-decoration: none;
   color: #000000;
+  margin-right: 1em;
 }
 
 .logoIcon {
-  width: 1.2em;
-  height: 1.2em;
   margin-right: 0.3em;
 }

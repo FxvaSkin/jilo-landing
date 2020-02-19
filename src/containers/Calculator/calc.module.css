@@ -22,7 +22,7 @@
 .devider {
   align-self: center;
   margin: 0 auto;
-  padding: 2em;
+  padding: 1em 2em;
 }
 
 .result {
@@ -44,7 +44,8 @@
 .footer {
   width: 100%;
   padding: 1em;
-  background-color: #f2f2f2;
+  background-color: #f6f7f8;
+  color: #9299a2;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
 }

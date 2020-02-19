@@ -19,18 +19,23 @@ import accessToken from 'token'
 const branches = [
   {
     key: 'anus',
-    lat: 38.570597362250226,
-    lng: 68.79770771265291,
-    tel: '+7 (555) 333 22 22',
-    address: 'Душанбе, 2',
+    lat: 38.524316,
+    lng: 68.76278,
+    tel: 'Тел: 93-999-00-61/90-999-00-61',
+    hours: `Режим работы:
+Пн-Сб: 8-17
+Вс: 9-14`,
+    address: 'г.Душанбе, ул. Н.Карабаева 92/2',
   },
   {
     key: 'anus2',
-    lat: 38.5705,
-    lng: 68.797,
-    tel: '+7 (555) 333 11 11',
-    hours: [],
-    address: 'Душанбе, 2',
+    lat: 38.554818,
+    lng: 68.762541,
+    tel: 'Тел: 93-300-09-99/90-993-09-99',
+    hours: `Режим работы:
+Пн-Сб: 8-17
+Вс: 9-14`,
+    address: 'г.Душанбе, ул. Н.Карабаева 6',
   },
 ]
 
@@ -139,9 +144,7 @@ const Map = () => {
           <>
             <b>{selected.tel}</b>
             <br />
-            <i>Закрыто. Откроется завтра в 9 утра.</i>
-            <br />
-            <i>09:00 - 19:00, без выходных</i>
+            <i>{selected.hours}</i>
             <p>{selected.address}</p>
 
             <button onClick={handleClose} className={styles.popupCloseButton}>

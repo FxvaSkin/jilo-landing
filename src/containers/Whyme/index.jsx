@@ -58,7 +58,7 @@ const Whyme = () => {
       <Header id="why" as="h2" className={styles.header}>
         Почему мы?
       </Header>
-      <p className={styles.answer}>Удобно. Быстро. Выгодно.</p>
+      <Header as="h2">Удобно. Быстро. Выгодно.</Header>
       <div className={styles.cardContainer}>
         <Card>card1</Card>
         <Card>

@@ -9,7 +9,6 @@ import { Button } from 'components/Button'
 import { Select } from 'components/Select'
 import { ArrowSvg } from './ArrowSvg'
 import { QuestionSvg } from './QuestionSvg'
-import { Link } from 'gatsby'
 
 const hallmarks = {
   defaultValue: '585',

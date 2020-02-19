@@ -5,20 +5,19 @@ import styles from './header.module.css'
 import { Menu, Item } from 'components/Nav'
 
 import { Link } from 'gatsby'
-import { TooltipGroup, Tooltip } from '../../components/Tooltip'
 
 const Header = ({ items }) => (
   <header className={cx(styles.header)}>
     <div className={cx(styles.headerContent)}>
       <h1 className={cx(styles.logo)}>
         <Link to="/#home" className={styles.logoLink}>
-          <span role="img" aria-label="gem stone">
+          <span role="img" aria-label="gem stone" className={styles.logoIcon}>
             💎
-          </span>{' '}
-          ЛОМБАРД 61
+          </span>
+          Jilo
         </Link>
       </h1>
-      <Menu role="navigation">
+      <Menu role="navigation" className={styles.nav}>
         {items?.map(item => (
           <Item key={item.key}>
             <Link to={item.to}>{item.title}</Link>
