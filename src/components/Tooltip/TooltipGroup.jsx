@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import cx from 'classnames'
 import styles from './tooltip.module.css'
 import { TooltipContext } from './TooltipContext'
@@ -7,6 +7,7 @@ import { Portal } from '../Portal'
 
 const TooltipGroup = ({ children }) => {
   const { target, onHover, onUnhover } = useTooltip()
+  if (typeof window === 'undefined') return null
 
   const box = target?.elem.current.getBoundingClientRect()
 

@@ -33,7 +33,7 @@ const Select = ({
   style,
   ...props
 }) => {
-  const [open, setOpen] = useState(open)
+  const [open, setOpen] = useState(false)
 
   const onClose = () => {
     setOpen(false)
