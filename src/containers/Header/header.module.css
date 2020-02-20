@@ -6,12 +6,9 @@
   background-color: #ffffff;
   color: #000000;
   height: 3.5em;
-
   border-bottom: solid 1px #ececec;
-
-  z-index: 1000;
-
   white-space: nowrap;
+  z-index: 1000;
 }
 
 @supports (backdrop-filter: blur()) {
