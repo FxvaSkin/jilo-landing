@@ -10,6 +10,8 @@ import styles from './layout.module.css'
 import { Header } from 'containers/Header'
 import { Footer } from 'containers/Footer'
 
+import { useMatchPosition } from 'hooks/useMatchPosition'
+
 if (typeof window !== 'undefined') {
   // eslint-disable-next-line global-require
   require('smooth-scroll')('a[href*="#"]')
@@ -33,6 +35,7 @@ const Layout = ({ children }) => {
 
   const { title, items } = data.site.siteMetadata
 
+  useMatchPosition()
   return (
     <StrictMode>
       <Header siteTitle={title} items={items} />
