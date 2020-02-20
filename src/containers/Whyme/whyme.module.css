@@ -36,6 +36,7 @@
 }
 
 .rowIcon {
+  flex-shrink: 0;
   margin-right: 1.5em;
 }
 
