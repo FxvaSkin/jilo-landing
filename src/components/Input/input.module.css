@@ -26,7 +26,10 @@
   transition: 120ms;
 }
 
-.input:focus.input:not(:read-only) + .label,
+.input:focus.input:not(:read-only) + .label {
+  transform: translateY(-110%);
+}
+
 .input:not(:placeholder-shown) + .label {
   transform: translateY(-110%);
 }
