@@ -17,7 +17,9 @@ const Banner = () => (
           за 5 минут.
         </Header>
         <p className={cx(styles.description)}>
-          <span>Lorem ipsum dolor sit amet, consectetur a dipiscing elit.</span>
+          <span>
+            Для повторных клиентов выдача займа занимает не более 3-х минут
+          </span>
         </p>
       </div>
       <div className={styles.imageContainer}>

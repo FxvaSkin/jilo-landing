@@ -33,18 +33,53 @@ const types = {
 }
 
 const rates = {
-  defaultValue: 'classic',
+  defaultValue: 'standart',
   options: [
     {
-      value: 'classic',
-      title: 'Классический',
+      value: 'standart',
+      title: 'Стандарт',
       percent: 0.25,
+      min: 200,
+      max: 20000,
       includeToday: true,
     },
     {
-      value: 'jewelry',
-      title: 'Ювелирный',
+      value: 'standartp',
+      title: 'Стандарт+',
       percent: 0.2,
+      min: 20000,
+      max: 40000,
+      includeToday: true,
+    },
+    {
+      value: 'premium',
+      title: 'Премиум',
+      percent: 0.18,
+      min: 40000,
+      max: 50000,
+      includeToday: true,
+    },
+    {
+      value: 'premiump',
+      title: 'Премиум+',
+      percent: 0.17,
+      min: 50000,
+      max: 70000,
+      includeToday: true,
+    },
+    {
+      value: 'business',
+      title: 'Бизнес',
+      percent: 0.15,
+      min: 50000,
+      max: 70000,
+      includeToday: true,
+    },
+    {
+      value: 'businessp',
+      title: 'Бизнес+',
+      percent: 0.13,
+      min: 100000,
       includeToday: true,
     },
   ],
@@ -109,7 +144,6 @@ const Calculator = () => {
         element.scrollIntoView({
           behavior: 'smooth',
         })
-        // window.scrollBy(0, -3.5 * 16)
       }
     }
   }
@@ -120,6 +154,8 @@ const Calculator = () => {
     mortgagedDays && debt && percent
       ? mortgagedDays * ((debt * percent) / 100) + debt
       : 0
+
+  const currentRate = rates.options.find(r => r.value === rate)
 
   return (
     <Section id="calculator">
@@ -135,9 +171,19 @@ const Calculator = () => {
                 value,
                 title,
               }))}
-              value={rates.options.find(r => r.value === rate).title}
+              value={currentRate.title}
               onChange={value => setRate(value)}
-              rightDock={<QuestionSvg help="Tooltip number one" />}
+              rightDock={
+                <QuestionSvg
+                  help={`Сумма займа от ${currentRate.min.toLocaleString(
+                    'tj',
+                  )}${
+                    currentRate.max
+                      ? ` до ${currentRate.max.toLocaleString('tj')}`
+                      : ''
+                  } сомони. ${currentRate.percent}% в день`}
+                />
+              }
               style={{ gridArea: 'rate' }}
             />
             <Select
@@ -205,10 +251,8 @@ const Calculator = () => {
         </div>
         <footer className={styles.footer}>
           <p>
-            Внимание! Расчет суммы к возврату не учитывает изменение банковского
-            курса сомони. Для более точного определения пробы, веса изделия, а
-            также стоимости займа и суммы к возврату, пожалуйста, посетите наш
-            ближайший филиал.
+            Внимание! Все операции проводятся только в национальной валюте
+            сомони (TJS)
           </p>
         </footer>
       </div>

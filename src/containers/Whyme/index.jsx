@@ -60,7 +60,9 @@ const Whyme = () => {
       </Header>
       <Header as="h2">Удобно. Быстро. Выгодно.</Header>
       <div className={styles.cardContainer}>
-        <Card>card1</Card>
+        <Card>
+          <p>Все заложенное имущество пломбируется при клиенте</p>
+        </Card>
         <Card>
           <h3>Прием погашений 24/7</h3>
           <p>
