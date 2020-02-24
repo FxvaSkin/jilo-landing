@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="97.211" height="97.211" viewBox="0 0 97.211 97.211"><path d="M48.606,0A48.606,48.606,0,1,1,0,48.606,48.553,48.553,0,0,1,48.606,0Z" fill="#f5f5f6"/><g transform="translate(18.987 30.227)"><circle cx="3.19" cy="3.19" r="3.19" transform="translate(8.432 8.409)" fill="none" stroke="#79818c" stroke-width="2"/><circle cx="3.19" cy="3.19" r="3.19" transform="translate(19.52 19.497)" fill="none" stroke="#79818c" stroke-width="2"/><path d="M6.8,24.366,22.445,10.088m8.429,24.248a20.246,20.246,0,0,0,4.253.456,17.443,17.443,0,0,0,17.62-17.164A17.443,17.443,0,0,0,35.126.464,19.215,19.215,0,0,0,30.873.92" transform="translate(2.847 -0.464)" fill="none" stroke="#79818c" stroke-linecap="round" stroke-width="2" fill-rule="evenodd"/><path d="M16.049,34.184a15.679,15.679,0,0,0,4.557.608A17.276,17.276,0,0,0,37.922,17.628,17.276,17.276,0,0,0,20.606.464,20.246,20.246,0,0,0,16.353.92" transform="translate(7.646 -0.464)" fill="none" stroke="#79818c" stroke-linecap="round" stroke-width="2" fill-rule="evenodd"/><circle cx="17.164" cy="17.164" r="17.164" transform="translate(0 0)" fill="none" stroke="#79818c" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="97.211" height="97.211" viewBox="0 0 97.211 97.211">
+<path d="M48.606,0A48.606,48.606,0,1,1,0,48.606,48.553,48.553,0,0,1,48.606,0Z" fill="#f5f5f6"/>
+<g transform="translate(18.987 30.227)">
+<circle cx="3.19" cy="3.19" r="3.19" transform="translate(8.432 8.409)" fill="none" stroke="#79818c" stroke-width="2"/>
+<circle cx="3.19" cy="3.19" r="3.19" transform="translate(19.52 19.497)" fill="none" stroke="#79818c" stroke-width="2"/>
+<path d="M6.8,24.366,22.445,10.088m8.429,24.248a20.246,20.246,0,0,0,4.253.456,17.443,17.443,0,0,0,17.62-17.164A17.443,17.443,0,0,0,35.126.464,19.215,19.215,0,0,0,30.873.92" transform="translate(2.847 -0.464)" fill="none" stroke="#79818c" stroke-linecap="round" stroke-width="2" fill-rule="evenodd"/>
+<path d="M16.049,34.184a15.679,15.679,0,0,0,4.557.608A17.276,17.276,0,0,0,37.922,17.628,17.276,17.276,0,0,0,20.606.464,20.246,20.246,0,0,0,16.353.92" transform="translate(7.646 -0.464)" fill="none" stroke="#79818c" stroke-linecap="round" stroke-width="2" fill-rule="evenodd"/>
+<circle cx="17.164" cy="17.164" r="17.164" transform="translate(0 0)" fill="none" stroke="#79818c" stroke-width="2"/>
+</g>
+</svg>
