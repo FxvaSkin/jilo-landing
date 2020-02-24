@@ -1,4 +1,5 @@
 .mapboxgl-popup-content {
+  padding: 1em !important;
   border-radius: 7px;
 }
 

@@ -1,7 +1,17 @@
 .cardsContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-  gap: 1em;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(20em, 1fr)); */
+  /* gap: 1em; */
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: -1em -1em;
+}
+
+.cardsContainer > * {
+  flex: 1 1 30%;
+  margin: 1em 1em;
 }
 
 .card {

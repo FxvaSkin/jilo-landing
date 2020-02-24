@@ -1,6 +1,8 @@
 .popup {
   font-size: 1rem;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
+  line-height: 2.5;
+  /* padding: 1em; */
 }
 
 .popupCloseButton {
@@ -35,4 +37,18 @@
   stroke-width: 1px;
   width: 3em;
   height: 3em;
+}
+
+.address,
+.clock,
+.phone > a {
+  color: #000000;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  display: block;
+  margin-right: 1em;
 }

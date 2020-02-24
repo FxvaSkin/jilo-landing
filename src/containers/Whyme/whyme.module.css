@@ -11,7 +11,7 @@
 }
 
 .cardContainer > * {
-  flex: 1 0 40%;
+  flex: 1 1 40%;
   min-width: 328px;
   margin: 1em 2em;
 }
@@ -25,9 +25,15 @@
 }
 
 .columnContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1em -2em;
+}
+
+.columnContainer > * {
+  flex: 1 1 40%;
+  /* min-width: 328px; */
+  margin: 1em 2em;
 }
 
 .row {
