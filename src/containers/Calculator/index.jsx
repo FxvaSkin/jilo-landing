@@ -216,11 +216,12 @@ const Calculator = () => {
               name="calc-input-date"
               label="Срок займа"
               rightDock={
-                <QuestionSvg help="Tooltip number two Tooltip number two Tooltip number two Tooltip number two Tooltip number two " />
+                <QuestionSvg help="По закону РТ закладывать имущество можно максимально на 30 дней, без учета продлений" />
               }
               {...numberMask}
               scale={0}
               value={mortgagedDays}
+              max={30}
               onChange={event => setMortgagedDays(event.currentTarget.value)}
             />
           </article>

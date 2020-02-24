@@ -5,13 +5,13 @@ import styles from './whyme.module.css'
 import { Section } from 'components/Section'
 import { Header } from 'components/Header'
 
-import { Item1, Item2, Item3, Item4, Item5, Item6 } from 'images/icons'
+import { Item1, Item2, Item3, Item4, Item5, Item6, Item7 } from 'images/icons'
 
 const rows = [
   {
     key: 'bet',
     title: 'Выгодные процентные ставки',
-    description: `You could have our columns here but you won’t. You'll have three, like everyone else.`,
+    description: `Проценты считаются ежедневно. От 3,9% до 7,5% в месяц, в зависимости от суммы займа`,
     icon: Item1,
   },
   {
@@ -21,9 +21,9 @@ const rows = [
     icon: Item2,
   },
   {
-    key: 'analysis',
-    title: 'Спектральный анализ',
-    description: `Спектральный анализ надежно и точно определяет пробу золота и не портит ваши украшения надпилами и реактивами`,
+    key: 'fine',
+    title: '3 дня без штрафных пений',
+    description: `3 дня штрафы не начисляются, а считаются обычные проценты, но если клиент опоздал на 4-й день, то штрафы начисляются с первого дня опоздания`,
     icon: Item3,
   },
   {
@@ -33,16 +33,22 @@ const rows = [
     icon: Item4,
   },
   {
-    key: 'contract',
-    title: 'Без сомнительных пунктов в договоре',
-    description: `Простые и понятные условия займов`,
-    icon: Item5,
+    key: 'storage',
+    title: 'Надежное хранение Вашего залога',
+    description: `Все залоговые имущества наших ломбардов хранятся в надежных и хорошо охраняемых хранилищах ведущих банков Таджикистана`,
+    icon: Item7,
   },
   {
     key: 'time',
     title: 'Удобное время обслуживания',
     description: `Режим работы наших ломбардов удобен всем, ведь мы работаем и по выходным`,
     icon: Item6,
+  },
+  {
+    key: 'contract',
+    title: 'Без сомнительных пунктов в договоре',
+    description: `Простые и понятные условия займов`,
+    icon: Item5,
   },
 ]
 
