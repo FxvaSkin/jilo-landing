@@ -182,4 +182,4 @@ const Map = () => {
   )
 }
 
-export { Map }
+export default Map
