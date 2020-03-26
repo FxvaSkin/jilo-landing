@@ -109,7 +109,7 @@ const Map = () => {
     <Mapbox
       zoom={[12]}
       // eslint-disable-next-line
-      style="mapbox://styles/mapbox/outdoors-v10?optimize=true"
+      style="mapbox://styles/mapbox/outdoors-v11?optimize=true"
       center={[68.762, 38.535]}
       flyToOptions={{ speed: 0 }}
       onClick={handleClose}

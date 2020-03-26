@@ -1,12 +1,8 @@
 .cardsContainer {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fill, minmax(20em, 1fr)); */
-  /* gap: 1em; */
-
   display: flex;
   flex-wrap: wrap;
-
-  margin: -1em -1em;
+  margin: -1em;
+  margin-bottom: 1em;
 }
 
 .cardsContainer > * {
@@ -18,4 +14,43 @@
   padding: 1em 2em;
   border: 1px solid #ececec;
   border-radius: 7px;
+  flex-basis: 280px;
+}
+
+.card > p + p {
+  margin-top: 1.5em;
+}
+
+.card ul {
+  font-weight: 500;
+}
+
+.card li {
+  list-style-type: circle;
+}
+
+.buttonContainer {
+  width: 100%;
+  text-align: center;
+}
+
+.button {
+  color: #5895eb;
+  background-color: #ecf1f7;
+  width: 15em;
+}
+
+.showMore.enterActive {
+  animation: show 120ms linear forwards;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

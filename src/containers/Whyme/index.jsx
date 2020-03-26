@@ -1,11 +1,13 @@
 import React from 'react'
 import cx from 'classnames'
 import styles from './whyme.module.css'
-
 import { Section } from 'components/Section'
 import { Header } from 'components/Header'
 
-import { Item1, Item2, Item3, Item4, Item5, Item6, Item7 } from 'images/icons'
+import { Item1, Item2, Item3, Item4, Item5, Item6 } from 'images/icons'
+
+import tyanImg from 'images/tyan.png'
+import kynImg from 'images/kyn.png'
 
 const rows = [
   {
@@ -39,12 +41,6 @@ const rows = [
     icon: Item6,
   },
   {
-    key: 'storage',
-    title: 'Надежное хранение вашего залога',
-    description: `Все залоговые имущества наших ломбардов хранятся в надежных и хорошо охраняемых хранилищах ведущих банков Таджикистана`,
-    icon: Item7,
-  },
-  {
     key: 'branches',
     title: 'Оплата процентов в любом филиале',
     description: `Оплачивать проценты и делать погашения можно в любом нашем филиале, а так же через терминалы приема платежей`,
@@ -58,38 +54,52 @@ const Card = ({ className, children, ...props }) => (
   </div>
 )
 
-const Whyme = () => {
-  return (
-    <Section id="why">
-      <Header as="h2" className={styles.header}>
-        Почему мы?
-      </Header>
-      <Header as="h2">Удобно. Быстро. Выгодно.</Header>
-      <div className={styles.cardContainer}>
-        <Card>
-          <p>Все заложенное имущество пломбируется при клиенте</p>
-        </Card>
-        <Card>
-          <h3>Прием погашений 24/7</h3>
-          <p>
-            Моментальное погашение и автоматическое продление залогового билета
-            через терминальные сети по всему городу
-          </p>
-        </Card>
-      </div>
-      <div className={styles.columnContainer} style={{ marginTop: '2em' }}>
-        {rows.map(row => (
-          <div key={row.key} className={styles.row}>
-            <img src={row.icon} alt={row.title} className={styles.rowIcon} />
-            <div className={styles.rowContent}>
-              <Header as="h3">{row.title}</Header>
-              <p>{row.description}</p>
-            </div>
+const Whyme = () => (
+  <Section id="why">
+    <Header as="h2" className={styles.header}>
+      Почему мы?
+    </Header>
+    <Header as="h2">Удобно. Быстро. Выгодно.</Header>
+    <div className={styles.cardContainer}>
+      <Card style={{ textAlign: 'end' }}>
+        <h3>Надежное хранение</h3>
+        <p>
+          <img
+            draggable={false}
+            src={kynImg}
+            alt="заложенное имущество пломбируется"
+            className={styles.kynImg}
+          />
+          Все залоговые имущества пломбируются при владельцах и хранятся в
+          надежных и хорошо охраняемых хранилищах ведущих банков Таджикистана
+        </p>
+      </Card>
+      <Card>
+        <h3>Прием погашений 24/7</h3>
+        <p>
+          <img
+            draggable={false}
+            src={tyanImg}
+            alt="Прием погашений 24/7"
+            className={styles.tyanImg}
+          />
+          Моментальное погашение и автоматическое продление залогового билета
+          через терминальные сети по всему городу
+        </p>
+      </Card>
+    </div>
+    <div className={styles.columnContainer} style={{ marginTop: '2em' }}>
+      {rows.map(row => (
+        <div key={row.key} className={styles.row}>
+          <img src={row.icon} alt={row.title} className={styles.rowIcon} />
+          <div className={styles.rowContent}>
+            <Header as="h3">{row.title}</Header>
+            <p>{row.description}</p>
           </div>
-        ))}
-      </div>
-    </Section>
-  )
-}
+        </div>
+      ))}
+    </div>
+  </Section>
+)
 
 export { Whyme }

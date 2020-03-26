@@ -34,14 +34,14 @@
 .logoLink {
   display: flex;
   align-items: center;
-
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 400;
   text-decoration: none;
   color: #000000;
   margin-right: 1em;
 }
 
 .logoIcon {
-  margin-right: 0.3em;
+  width: 2em;
+  margin-right: 0.8em;
 }
