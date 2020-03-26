@@ -5,7 +5,7 @@ import { Banner } from 'containers/Banner'
 import { Calculator } from 'containers/Calculator'
 import { Whyme } from 'containers/Whyme'
 import { Branches } from 'containers/Branches'
-import { Map } from 'containers/Map'
+// import { Map } from 'containers/Map'
 import { FAQ } from 'containers/FAQ'
 
 import SEO from 'components/seo'
@@ -17,7 +17,7 @@ const IndexPage = () => (
     <Calculator />
     <Whyme />
     <Branches />
-    <Map />
+    {/* <Map /> */}
     <FAQ />
   </Layout>
 )
