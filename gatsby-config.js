@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Ломбард Jilo`,
-    description: `Разного рода сео описание`,
-    siteUrl: `https://domain.tj`,
+    title: `Гаравхона Jilo - Сеть ломбардов в Душанбе`,
+    description: `Кредит на руку за 5 минут`,
+    siteUrl: `https://garavhona.tj/`,
     author: `@fxvaskin`,
     items: [
       { key: 'calculator', to: '/#calculator', title: 'Онлайн оценка' },
@@ -33,7 +33,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`,
+        icon: `src/images/icon.png`,
       },
     },
     'gatsby-plugin-resolve-src',
