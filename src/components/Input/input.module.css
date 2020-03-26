@@ -8,11 +8,11 @@
   width: 100%;
   font-size: 0.95rem;
   height: 4.2rem;
-  border: none;
   border-radius: 7px;
-  background: #f2f2f2;
   padding: 0 1.5rem;
   padding-top: 1.5rem;
+  border: solid 1px #ececec;
+  background-color: #ecf1f7;
 }
 
 .label {
@@ -24,6 +24,10 @@
   left: 1.5rem;
   color: #969ca7;
   transition: 120ms;
+}
+
+.input:focus.input:not(:read-only) {
+  background-color: #ffffff;
 }
 
 .input:focus.input:not(:read-only) + .label {

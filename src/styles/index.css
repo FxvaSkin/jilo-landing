@@ -4,9 +4,11 @@
 }
 
 *::selection {
-  background-color: slategrey;
+  background-color: #ffdd2c;
+  color: #000000;
 }
 
+/* ¯\_(ツ)_/¯ */
 *:focus {
   outline: none;
 }
