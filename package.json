@@ -20,9 +20,12 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@loadable/component": "^5.12.0",
     "classnames": "^2.2.6",
     "gatsby": "^2.19.7",
+    "gatsby-concurrent-mode": "^1.0.0",
     "gatsby-image": "^2.2.39",
+    "gatsby-plugin-loadable-components-ssr": "^2.0.0",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-netlify": "^2.1.32",
     "gatsby-plugin-offline": "^3.0.32",
@@ -35,8 +38,8 @@
     "gatsby-transformer-sharp": "^2.3.13",
     "mapbox-gl": "^1.7.0",
     "postcss-preset-env": "^6.7.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^0.0.0-experimental-aae83a4b9",
+    "react-dom": "^0.0.0-experimental-aae83a4b9",
     "react-helmet": "^5.2.1",
     "react-imask": "5.2.1",
     "react-mapbox-gl": "^4.8.2",

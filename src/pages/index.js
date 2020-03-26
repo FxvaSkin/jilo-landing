@@ -1,4 +1,5 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
+import loadable from '@loadable/component'
 
 import { Layout } from 'containers/Layout'
 import { Banner } from 'containers/Banner'
@@ -9,7 +10,7 @@ import { FAQ } from 'containers/FAQ'
 import SEO from 'components/seo'
 
 // import { Map } from 'containers/Map'
-const Map = lazy(() => import('containers/Map'))
+const Map = loadable(() => import('containers/Map'))
 
 const IndexPage = () => (
   <Layout>
@@ -18,9 +19,7 @@ const IndexPage = () => (
     <Calculator />
     <Whyme />
     <Branches />
-    <Suspense fallback="лошадинг">
-      <Map />
-    </Suspense>
+    <Map />
     <FAQ />
   </Layout>
 )
