@@ -87,31 +87,31 @@ const rates = {
 
 const amount = {
   scrap: {
-    '375': 110,
-    '500': 150,
-    '585': 220,
-    '750': 240,
-    '875': 280,
-    '916': 340,
-    '999': 360,
+    '375': 130,
+    '500': 190,
+    '585': 230,
+    '750': 305,
+    '875': 360,
+    '916': 380,
+    '999': 500,
   },
   jewel: {
-    '375': 130,
-    '500': 160,
-    '585': 230,
-    '750': 260,
-    '875': 300,
-    '916': 350,
-    '999': 370,
+    '375': 150,
+    '500': 210,
+    '585': 250,
+    '750': 325,
+    '875': 380,
+    '916': 400,
+    '999': 500,
   },
   newJewel: {
-    '375': 150,
-    '500': 180,
-    '585': 250,
-    '750': 280,
-    '875': 320,
-    '916': 370,
-    '999': 380,
+    '375': 170,
+    '500': 230,
+    '585': 270,
+    '750': 345,
+    '875': 400,
+    '916': 420,
+    '999': 500,
   },
 }
 
@@ -149,13 +149,13 @@ const Calculator = () => {
   }
 
   const debt = weight ? weight * amount[type][hallmark] : 0
-  const percent = rate && rates.options.find(r => r.value === rate).percent
+  const percent = rate && rates.options.find((r) => r.value === rate).percent
   const received =
     mortgagedDays && debt && percent
       ? mortgagedDays * ((debt * percent) / 100) + debt
       : 0
 
-  const currentRate = rates.options.find(r => r.value === rate)
+  const currentRate = rates.options.find((r) => r.value === rate)
 
   return (
     <Section id="calculator">
@@ -172,7 +172,7 @@ const Calculator = () => {
                 title,
               }))}
               value={currentRate.title}
-              onChange={value => setRate(value)}
+              onChange={(value) => setRate(value)}
               rightDock={
                 <QuestionSvg
                   help={`Сумма займа от ${currentRate.min.toLocaleString(
@@ -193,14 +193,16 @@ const Calculator = () => {
                 value,
                 title,
               }))}
-              value={hallmarks.options.find(hm => hm.value === hallmark).title}
-              onChange={value => setHallmark(value)}
+              value={
+                hallmarks.options.find((hm) => hm.value === hallmark).title
+              }
+              onChange={(value) => setHallmark(value)}
             />
             <Input
               name="calc-input-weight"
               label="Вес изделия, гр"
               {...numberMask}
-              onChange={event => setWeight(event.currentTarget.value)}
+              onChange={(event) => setWeight(event.currentTarget.value)}
             />
             <Select
               name="calc-input-type"
@@ -209,8 +211,8 @@ const Calculator = () => {
                 value,
                 title,
               }))}
-              value={types.options.find(t => t.value === type).title}
-              onChange={value => setType(value)}
+              value={types.options.find((t) => t.value === type).title}
+              onChange={(value) => setType(value)}
             />
             <Input
               name="calc-input-date"
@@ -222,7 +224,7 @@ const Calculator = () => {
               scale={0}
               value={mortgagedDays}
               max={30}
-              onChange={event => setMortgagedDays(event.currentTarget.value)}
+              onChange={(event) => setMortgagedDays(event.currentTarget.value)}
             />
           </article>
 
